@@ -1,6 +1,8 @@
 import assets from "../assets/assets";
+import { useAppContext } from "../context/AppContext";
 
 const Header = () => {
+  const { personalBest } = useAppContext();
   return (
     <div className="flex items-center justify-between mb-12">
       <div>
@@ -22,7 +24,7 @@ const Header = () => {
               Personal best:{" "}
             </span>
             <span className=" md:hidden text-neutral-400">Best: </span>
-            92 WPM
+            {personalBest || 0} WPM
           </p>
         </div>
       </div>
