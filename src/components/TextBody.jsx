@@ -168,6 +168,10 @@ const TextBody = () => {
         value={userInput}
         onChange={handleTyping}
         onPaste={(e) => e.preventDefault()}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
         className="absolute inset-0 opacity-0 cursor-default"
         autoFocus
       />
